@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+void sort(int * arr,int SIZE)
+{   
+    int tmp;
+    int i;
+    for(i = 1;i< SIZE ;i++ )
+    {
+        for(int j = 0;j<SIZE-i;j++)
+        {
+            if(arr[j]>arr[j+1])
+            {
+                tmp =arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=tmp;
+            }
+        }
+
+    }
+
+}
+int main  (void)
+{
+    int i;
+    int arr[5]={5,4,3,2,1};
+    sort(arr,5);
+   for(i=0;i<5;i++)
+    {
+        printf("%d ",arr[0]);
+    }
+
+    return 0;
+}
